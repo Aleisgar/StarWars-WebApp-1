@@ -1,25 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Cards = () => {
+export const CardPlanet = () => {
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
         <img
-          src="https://i.picsum.photos/id/100/2500/1656.jpg?hmac=gWyN-7ZB32rkAjMhKXQgdHOIBRHyTSgzuOK6U0vXb1w"
+          src="https://www.nosolobits.com/imagenes/guia/coruscant_1843754588.jpg"
           alt="placehold.it"
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
+          <h5 className="card-title">Planeta 1</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">An item</li>
-            <li className="list-group-item">A second item</li>
-            <li className="list-group-item">A third item</li>
+            <li className="list-group-item">Population:</li>
+            <li className="list-group-item">Terrain:</li>
           </ul>
-          <Link to="/detail"> 
+          <Link to="/detailPlanet"> 
           <span href="#" className="btn btn-outline-primary">
-            Go somewhere
+            Learn More
           </span></Link>
           <button type="button" className="btn btn-outline-warning float-end">
             <svg
