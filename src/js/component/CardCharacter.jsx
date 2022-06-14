@@ -1,7 +1,11 @@
-import React from "react";
+import React,{ useContext }  from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
-export const CardCharacter = () => {
+
+export const CardCharacter = ({name,id,gender,eye,hair}) => {
+ const {store,actions} = useContext(Context);
+
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
@@ -11,17 +15,18 @@ export const CardCharacter = () => {
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">Fucking Yoda</h5>
+          <h5 className="card-title">{name}</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Gender:</li>
-            <li className="list-group-item">Hair Color:</li>
-            <li className="list-group-item">Eye Color:</li>
+            <li className="list-group-item">Gender: {gender}</li>
+            <li className="list-group-item">Hair Color: {hair}</li>
+            <li className="list-group-item">Eye Color: {eye}</li>
           </ul>
-          <Link to="/detailCharacter"> 
+          <Link to={"detailCharacter/" + id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More
-          </span></Link>
-          <button type="button" className="btn btn-outline-warning float-end">
+          </span>
+          </Link>
+          <button type="button" onClick={()=>{actions.addFavorites(name)}} className="btn btn-outline-warning float-end">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

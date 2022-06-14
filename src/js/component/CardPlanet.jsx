@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const CardPlanet = () => {
+export const CardPlanet = ({planetName}) => {
   return (
     <>
       <div className="card me-3" style={{ width: "18rem" }}>
@@ -11,7 +11,7 @@ export const CardPlanet = () => {
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">Planeta 1</h5>
+          <h5 className="card-title">{planetName}</h5>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">Population:</li>
             <li className="list-group-item">Terrain:</li>
