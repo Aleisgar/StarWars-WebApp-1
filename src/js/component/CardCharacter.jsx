@@ -8,10 +8,10 @@ export const CardCharacter = ({name,id,gender,eye,hair}) => {
 
   return (
     <>
-      <div className="card me-3" style={{ width: "18rem" }}>
+      <div className="card me-3 h-100" style={{ width: "18rem" }}>
         <img
           src="https://elcomercio.pe/resizer/CCzKYeli5rmsCSECl_r9VfrE8s4=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IN5YML5RRFNBKOV2T3UVJ6VLI.jpg"
-          alt="placehold.it"
+          alt="baby Yoda"
           className="card-img-top"
         />
         <div className="card-body">
@@ -21,6 +21,8 @@ export const CardCharacter = ({name,id,gender,eye,hair}) => {
             <li className="list-group-item">Hair Color: {hair}</li>
             <li className="list-group-item">Eye Color: {eye}</li>
           </ul>
+          </div>
+          <div className="card-footer bg-white">
           <Link to={"detailCharacter/" + id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More

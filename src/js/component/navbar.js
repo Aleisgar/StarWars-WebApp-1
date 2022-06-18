@@ -25,7 +25,7 @@ export const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Favoritos <span className="badge badge-light">{store.favorites.length}</span>
+              Favorites <span className="badge badge-light">{store.favorites.length}</span>
             </button>
             
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

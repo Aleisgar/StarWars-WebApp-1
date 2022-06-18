@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const DetailCharacter = ({ name, eye, hair, gender }) => {
+export const DetailCharacter = () => {
   const { store, actions } = useContext(Context);
 
   const { theid } = useParams(); //extrae el valor theid, que es el nombre de la ruta que se le ha dado en el layout
-  //console.log(theid);
+  console.log(theid);
   const characterData = store.character;
-  console.log(characterData[theid]); //asignale ese valor que hay en la ruta para y así accederá solo a la info de el personaje que está en esa posición
+  //console.log(characterData[theid]); //asignale ese valor que hay en la ruta para y así accederá solo a la info de el personaje que está en esa posición
 
   return (
     <>
@@ -26,9 +26,7 @@ export const DetailCharacter = ({ name, eye, hair, gender }) => {
               <div className="card-body text-center">
                 <h4 className="card-title">{characterData[theid]?.name}</h4>
                 <p className="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
               </div>
             </div>
@@ -37,7 +35,6 @@ export const DetailCharacter = ({ name, eye, hair, gender }) => {
       </div>
       {/* Características */}
       <div className="container">
-        {/* <hr style={{ color: "red", height: "2px" }} /> */}
         <div className="table-responsive">
         <table className="table text-danger text-center border-bottom-0">
           <thead>

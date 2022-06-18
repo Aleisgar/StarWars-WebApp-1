@@ -33,6 +33,7 @@ const injectContext = PassedComponent => {
 			 **/
 			state.actions.loadCharacter();
 			state.actions.loadPlanet();
+			state.actions.loadStarship();
 			
 			//state.actions.changeColor(0,"green")
 		}, []);

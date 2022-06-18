@@ -18,6 +18,7 @@ const getState = ({
             ],
             character: [],
             planet: [],
+            starship: [],
             favorites: [],
             theIds: {},
 
@@ -48,7 +49,14 @@ const getState = ({
                     }))
                 console.log(getStore())
             },
-
+            loadStarship: () => {
+                fetch("https://swapi.dev/api/starships/")
+                    .then(resp => resp.json())
+                    .then(data => setStore({
+                        starship: data.results
+                    }))
+                console.log(getStore())
+            },
             addFavorites: (newItem) => {
                 const store = getStore();
                 if (!store.favorites.includes(newItem)) {

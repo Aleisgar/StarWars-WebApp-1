@@ -1,32 +1,28 @@
-import React, {useContext} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
 
-
-
-export const CardPlanet = ({planetName,population,terrain,id}) => {
-  const {store,actions} = useContext(Context);
-
+export const CardVehicle = ({starshipName,model,length,id}) => {
   return (
     <>
       <div className="card me-3 h-100" style={{ width: "18rem" }}>
         <img
-          src="https://www.nosolobits.com/imagenes/guia/coruscant_1843754588.jpg"
-          alt="planet"
+          src="https://www.cinemascomics.com/wp-content/uploads/2021/06/Executor.jpg.webp"
+          alt="star destroyer"
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">{planetName}</h5>
+          <h5 className="card-title">{starshipName}</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Population: {population}</li>
-            <li className="list-group-item">Terrain: {terrain}</li>
-          </ul> </div>
+            <li className="list-group-item">Model: {model}</li>
+            <li className="list-group-item">Length: {length}</li>
+          </ul>
+           </div>
           <div className="card-footer bg-white">
-          <Link to={"detailPlanet/" + id}> 
+          <Link to={"/detailVehicle"+id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More
           </span></Link>
-          <button type="button" onClick={()=>{actions.addFavorites(planetName)}}  className="btn btn-outline-warning float-end">
+          <button type="button" className="btn btn-outline-warning float-end">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

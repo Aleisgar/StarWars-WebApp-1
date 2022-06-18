@@ -2,38 +2,38 @@ import React, { useContext } from "react";
 import "../../styles/home.css";
 import { CardCharacter } from "../component/CardCharacter.jsx";
 import { CardPlanet } from "../component/CardPlanet.jsx";
-import { Cards } from "../component/cards";
+import {CardVehicle} from "../component/CardVehicle.jsx"
 import { Context } from "../store/appContext";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
- // console.log(store.character);
   const people = store.character;
-  
-  //console.log(store.planet);
+  const starship= store.starship;
   const planet =store.planet;
+
   return (
+
     <div className="container">
       {/* Menú scroll */}
       <div id="list-example" className="list-group">
-        <p
+        <a
           className="list-group-item list-group-item-action border-0 text-danger fs-3"
           href="#characters"
         >
           Characters
-        </p>
-        <p
+        </a>
+        <a
           className="list-group-item list-group-item-action border-0 text-danger fs-3"
           href="#planets"
         >
           Planets
-        </p>
-        <p
+        </a>
+        <a
           className="list-group-item list-group-item-action border-0 text-danger fs-3"
           href="#vehicles"
         >
           Vehicles
-        </p>
+        </a>
       </div>
 
       {/*Cards characters */}
@@ -48,7 +48,7 @@ export const Home = () => {
           Characters
         </h4>
         <div className="d-flex overflow-auto">
-            {people.map((item,index) => (<div className="col"key={item.uid}>
+            {people.map((item,index) => (<div className="col" key={index}>
               <CardCharacter id={index} name={item.name} eye={item.eye_color} gender={item.gender} hair = {item.hair_color} /></div>
             ))} 
          </div>
@@ -65,13 +65,29 @@ export const Home = () => {
             Planets
           </h4>
           <div className="d-flex overflow-auto">
-          {planet.map((item) => (<div className="col"key={item.uid}>
-              <CardPlanet  planetName={item.name}/></div>
+          {planet.map((item,index) => (<div className="col" key={index}>
+              <CardPlanet id={index} planetName={item.name} population={item.population} terrain={item.terrain} /></div>
             ))} 
           </div>
-          <h4 id="vehicles">Vehicles</h4>
-          <Cards />
-        </div>
+
+           </div>
+           {/* Cards vehiculos */}
+        <div
+          data-bs-spy="scroll"
+          data-bs-target="#list-example"
+          data-bs-offset="0"
+          className="scrollspy-example"
+          tabIndex="0"
+        >
+          <h4 className="my-3" id="planets">
+            Vehicles
+          </h4>
+          <div className="d-flex overflow-auto">
+          {starship.map((item,index) => (<div className="col" key={index}>
+              <CardVehicle  id={index} starshipName={item.name} model={item.model} length={item.length} /></div>
+            ))} 
+          </div>
+       </div>
       </div>
     </div>
   );
