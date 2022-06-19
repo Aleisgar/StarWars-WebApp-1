@@ -1,14 +1,16 @@
-import React,{ useContext }  from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-
-export const CardCharacter = ({name,id,gender,eye,hair,image}) => {
- const {store,actions} = useContext(Context);
-console.log(image);
+export const CardCharacter = ({ name, id, gender, eye, hair, image }) => {
+  const { store, actions } = useContext(Context);
+  
   return (
     <>
-      <div className="card me-3 bg-dark border border-primary h-100" style={{ width: "20rem" }}>
+      <div
+        className="card me-3 bg-dark border border-primary h-100"
+        style={{ width: "20rem" }}
+      >
         <img
           src={image}
           alt="baby Yoda"
@@ -18,23 +20,35 @@ console.log(image);
         <div className="card-body ">
           <h5 className="card-title text-primary">{name}</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item text-white bg-transparent">Gender: {gender}</li>
-            <li className="list-group-item text-white bg-transparent">Hair Color: {hair}</li>
-            <li className="list-group-item text-white bg-transparent">Eye Color: {eye}</li>
+            <li className="list-group-item text-white bg-transparent">
+              Gender: {gender}
+            </li>
+            <li className="list-group-item text-white bg-transparent">
+              Hair Color: {hair}
+            </li>
+            <li className="list-group-item text-white bg-transparent">
+              Eye Color: {eye}
+            </li>
           </ul>
-          </div>
-          <div className="card-footer mb-2 text-white bg-transparent">
-          <Link to={"detailCharacter/" + id}> 
-          <span href="#" className="btn btn-outline-primary">
-            Learn More
-          </span>
+        </div>
+        <div className="card-footer mb-2 text-white bg-transparent">
+          <Link to={"detailCharacter/" + id}>
+            <span href="#" className="btn btn-outline-primary">
+              Learn More
+            </span>
           </Link>
-          <button type="button" onClick={()=>{actions.addFavorites(name)}} className="btn btn-outline-warning float-end">
+          <button
+            type="button"
+            onClick={() => {
+              actions.addFavorites(name);
+            }}
+            className="btn btn-outline-warning float-end"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-             fill="currentColor" 
+              fill="currentColor"
               className="bi bi-heart"
               viewBox="0 0 16 16"
               color="orange"

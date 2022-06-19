@@ -48,7 +48,7 @@ export const Home = () => {
         <h3 className="my-3 text-warning" id="characters">
           CHARACTERS
         </h3>
-        <div className="d-flex overflow-auto mb-1">
+        <div className="d-flex overflow-auto mb-2">
             {people.map((item,index) => (<div className="col" key={index}>
               <CardCharacter image={store.images[index]} id={index} name={item.name} eye={item.eye_color} gender={item.gender} hair = {item.hair_color} /></div>
             ))} 
@@ -65,7 +65,7 @@ export const Home = () => {
           <h3 className="my-3 text-warning" id="planets">
             PLANETS
           </h3>
-          <div className="d-flex overflow-auto">
+          <div className="d-flex overflow-auto mb-2">
           {planet.map((item,index) => (<div className="col" key={index}>
               <CardPlanet image={store.planet_images[index]} id={index} planetName={item.name} population={item.population} terrain={item.terrain} /></div>
             ))} 
@@ -73,22 +73,22 @@ export const Home = () => {
 
            </div>
            {/* Cards vehiculos */}
-        {/* <div
+        <div
           data-bs-spy="scroll"
           data-bs-target="#list-example"
           data-bs-offset="0"
           className="scrollspy-example"
           tabIndex="0"
         >
-          <h4 className="my-3" id="planets">
-            Vehicles
+          <h4 className="my-3 text-warning" id="planets">
+            VEHICLES
           </h4>
           <div className="d-flex overflow-auto">
           {starship.map((item,index) => (<div className="col" key={index}>
-              <CardVehicle  id={index} starshipName={item.name} model={item.model} length={item.length} /></div>
+              <CardVehicle  image={store.ship_images[index]} id={index} starshipName={item.name} model={item.model} length={item.length} /></div>
             ))} 
           </div>
-       </div> */}
+       </div>
       </div>
     </div>
   );

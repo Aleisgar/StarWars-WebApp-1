@@ -6,8 +6,8 @@ export const DetailCharacter = () => {
   const { store, actions } = useContext(Context);
 
   const { theid } = useParams(); //extrae el valor theid, que es el nombre de la ruta que se le ha dado en el layout
-  console.log(theid);
-  console.log(store.images[theid]);
+  // console.log(theid);
+  // console.log(store.images[theid]);
   const characterData = store.character;
   //console.log(characterData[theid]); //asignale ese valor que hay en la ruta para y así accederá solo a la info de el personaje que está en esa posición
 

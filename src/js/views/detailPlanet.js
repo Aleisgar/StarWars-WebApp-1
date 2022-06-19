@@ -20,7 +20,7 @@ export const DetailPlanet = () => {
             </div>
             <div className="col-md-8">
               <div className="card-body text-center">
-                <h5 className="card-title">{store.planet[theid]?.name}</h5>
+                <h4 className="card-title">{store.planet[theid]?.name}</h4>
                 <p className="card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
