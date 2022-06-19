@@ -7,7 +7,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-light bg-light mb-3">
+      <nav className="navbar sticky-top navbar-dark bg-dark mb-3">
         <div className="container">
           <Link to="/">
             <img
@@ -19,13 +19,13 @@ export const Navbar = () => {
           </Link>
           <div className="dropdown">
             <button
-              className="btn btn-primary dropdown-toggle"
+              className="btn btn-warning dropdown-toggle"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Favorites <span className="badge badge-light">{store.favorites.length}</span>
+              Favorites <span className="badge text-dark">{store.favorites.length}</span>
             </button>
             
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

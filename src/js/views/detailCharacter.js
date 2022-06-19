@@ -7,6 +7,7 @@ export const DetailCharacter = () => {
 
   const { theid } = useParams(); //extrae el valor theid, que es el nombre de la ruta que se le ha dado en el layout
   console.log(theid);
+  console.log(store.images[theid]);
   const characterData = store.character;
   //console.log(characterData[theid]); //asignale ese valor que hay en la ruta para y así accederá solo a la info de el personaje que está en esa posición
 
@@ -17,7 +18,7 @@ export const DetailCharacter = () => {
           <div className="row g-0">
             <div className="col-md-4">
               <img
-                src="https://elcomercio.pe/resizer/CCzKYeli5rmsCSECl_r9VfrE8s4=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IN5YML5RRFNBKOV2T3UVJ6VLI.jpg"
+                src={store.images[theid]}
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -36,23 +37,23 @@ export const DetailCharacter = () => {
       {/* Características */}
       <div className="container">
         <div className="table-responsive">
-        <table className="table text-danger text-center border-bottom-0">
+        <table className="table text-warning text-center border-bottom-0">
           <thead>
             <tr>
-              <th scope="col text-danger">Name</th>
-              <th scope="col text-danger">Gender</th>
-              <th scope="col text-danger">Eye Color</th>
-              <th scope="col text-danger">Hair Color</th>
-              <th scope="col text-danger">Year of Birth</th>
+              <th scope="col text-warning">Name</th>
+              <th scope="col text-warning">Gender</th>
+              <th scope="col text-warning">Eye Color</th>
+              <th scope="col text-warning">Hair Color</th>
+              <th scope="col text-warning">Year of Birth</th>
             </tr>
           </thead>
           <tbody>
           <tr className="text-center">
-            <td className="text-danger">{characterData[theid]?.name}</td>
-            <td className="text-danger">{characterData[theid]?.gender}</td>
-            <td className="text-danger">{characterData[theid]?.eye_color}</td>
-            <td className="text-danger">{characterData[theid]?.hair_color}</td>
-            <td className="text-danger">{characterData[theid]?.birth_year}</td>
+            <td className="text-warning">{characterData[theid]?.name}</td>
+            <td className="text-warning">{characterData[theid]?.gender}</td>
+            <td className="text-warning">{characterData[theid]?.eye_color}</td>
+            <td className="text-warning">{characterData[theid]?.hair_color}</td>
+            <td className="text-warning">{characterData[theid]?.birth_year}</td>
           </tr>
           </tbody>
            </table>

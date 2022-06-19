@@ -1,27 +1,30 @@
 import React, {useContext} from "react";
+import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
 
-export const CardPlanet = ({planetName,population,terrain,id}) => {
+export const CardPlanet = ({planetName,population,terrain,id,image}) => {
   const {store,actions} = useContext(Context);
+
 
   return (
     <>
-      <div className="card me-3 h-100" style={{ width: "18rem" }}>
+      <div className="card me-3 bg-dark border border-primary h-100" style={{ width: "20rem" }}>
         <img
-          src="https://www.nosolobits.com/imagenes/guia/coruscant_1843754588.jpg"
+          src={image}
           alt="planet"
+          style={{ height: "250px", objectFit: "cover" }}
           className="card-img-top"
         />
         <div className="card-body">
-          <h5 className="card-title">{planetName}</h5>
+          <h5 className="card-title text-primary">{planetName}</h5>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">Population: {population}</li>
-            <li className="list-group-item">Terrain: {terrain}</li>
+            <li className="list-group-item text-white bg-transparent">Population: {population}</li>
+            <li className="list-group-item text-white bg-transparent">Terrain: {terrain}</li>
           </ul> </div>
-          <div className="card-footer bg-white">
+          <div className="card-footer mb-2 text-white bg-transparent">
           <Link to={"detailPlanet/" + id}> 
           <span href="#" className="btn btn-outline-primary">
             Learn More

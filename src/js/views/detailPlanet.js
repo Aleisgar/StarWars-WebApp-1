@@ -13,7 +13,7 @@ export const DetailPlanet = () => {
           <div className="row g-0">
             <div className="col-md-4">
               <img
-                src="https://www.nosolobits.com/imagenes/guia/coruscant_1843754588.jpg"
+                src={store.planet_images[theid]}
                 className="img-fluid rounded-start"
                 alt="..."
               />
@@ -37,25 +37,25 @@ export const DetailPlanet = () => {
       {/* Características */}
       <div className="container">
         <div className="table-responsive">
-          <table className="table text-danger text-center border-bottom-0">
+          <table className="table text-warning text-center border-bottom-0">
             <thead>
               <tr>
-                <th scope="col text-danger">Name</th>
-                <th scope="col text-danger">Population</th>
-                <th scope="col text-danger">Diameter</th>
-                <th scope="col text-danger">Climate</th>
-                <th scope="col text-danger">Terrain</th>
+                <th scope="col text-warning">Name</th>
+                <th scope="col text-warning">Population</th>
+                <th scope="col text-warning">Diameter</th>
+                <th scope="col text-warning">Climate</th>
+                <th scope="col text-warning">Terrain</th>
               </tr>
             </thead>
             <tbody>
               <tr className="text-center">
-                <td className="text-danger">{store.planet[theid]?.name}</td>
-                <td className="text-danger">
+                <td className="text-warning">{store.planet[theid]?.name}</td>
+                <td className="text-warning">
                   {store.planet[theid]?.population}
                 </td>
-                <td className="text-danger">{store.planet[theid]?.diameter}</td>
-                <td className="text-danger">{store.planet[theid]?.climate}</td>
-                <td className="text-danger">{store.planet[theid]?.terrain}</td>
+                <td className="text-warning">{store.planet[theid]?.diameter}</td>
+                <td className="text-warning">{store.planet[theid]?.climate}</td>
+                <td className="text-warning">{store.planet[theid]?.terrain}</td>
               </tr>
             </tbody>
           </table>

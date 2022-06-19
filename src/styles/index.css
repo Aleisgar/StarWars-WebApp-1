@@ -4,3 +4,13 @@
 .list-group-item.active {
     background-color: white;
 }
+
+body {
+    background-image: url("https://c1.wallpaperflare.com/preview/85/553/267/stars-background-blue-photoshop.jpg");
+    background-size: cover;
+
+}
+
+ul .list-group {
+    color: blue;
+}
