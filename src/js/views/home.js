@@ -15,7 +15,9 @@ export const Home = () => {
   return (
 
     <div className="container">
+      
       {/* Menú scroll */}
+
       <div id="list-example" className="list-group">
         <a
           className="list-group-item list-group-item-action border-0 text-primary bg-transparent fs-3"
@@ -38,6 +40,7 @@ export const Home = () => {
       </div>
 
       {/*Cards characters */}
+
       <div
         data-bs-spy="scroll"
         data-bs-target="#list-example"
@@ -55,6 +58,7 @@ export const Home = () => {
          </div>
           
         {/* Cards planetas */}
+
         <div
           data-bs-spy="scroll"
           data-bs-target="#list-example"
@@ -80,7 +84,7 @@ export const Home = () => {
           className="scrollspy-example"
           tabIndex="0"
         >
-          <h4 className="my-3 text-warning" id="planets">
+          <h4 className="my-3 text-warning" id="vehicles">
             VEHICLES
           </h4>
           <div className="d-flex overflow-auto">
